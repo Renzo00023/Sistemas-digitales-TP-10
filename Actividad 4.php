@@ -7,7 +7,11 @@
 <body>
     <?php
     $confirmado = array(true, false, true, false, true, false);
-    echo "El elemento con índice 0 es: " . ($confirmado[0] ? "true" : "false") . "<br>";
+    if ($confirmado[0]) {
+        echo "El elemento con índice 0 es: true<br>";
+    } else {
+        echo "El elemento con índice 0 es: false<br>";
+    }
     ?>
 </body>
 </html>
