@@ -7,7 +7,14 @@
 <body>
     <?php
     $jugador = array("González", "Pérez", "Rodríguez", "López", "Martínez");
-    echo "La alineación del equipo está compuesta por: " . implode(", ", $jugador) . ".<br>";
+    $frase = "La alineación del equipo está compuesta por: ";
+    for ($i = 0; $i < count($jugador); $i++) {
+        $frase .= $jugador[$i];
+        if ($i < count($jugador) - 1) {
+            $frase .= ", ";
+        }
+    }
+    echo $frase . ".<br>";
     ?>
 </body>
 </html>
